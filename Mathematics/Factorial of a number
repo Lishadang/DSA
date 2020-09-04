@@ -1,0 +1,39 @@
+N! = N*(N-1)*(N-2)*....*2*1
+
+Note: As, per convention, 0! = 1.
+
+Sample Problem: Given a number N, the task is to count number of trailing zeroes in factorial of N. That is, number of zeroes 
+at the end in the number N!.
+
+For Example:
+Input: N = 5
+Output: 1 
+Factorial of 5 is 120 which has one trailing 0.
+
+Input: N = 20
+Output: 4
+Factorial of 20 is 2432902008176640000 which has
+4 trailing zeroes.
+
+Consider prime factors of N!. A trailing zero is always produced by the prime factors 2 and 5. If we can count the number 
+of 5s and 2s in prime factorization of N!, our task is done.
+
+Trailing 0s in N! = Count of 5s in prime factors of n!
+                  = floor(n/5) + floor(n/25) + floor(n/125) + ....
+def factorial(n): 
+      
+    # single line to find factorial 
+    return 1 if (n==1 or n==0) else n * factorial(n - 1);  
+
+def factorial(n): 
+    if n < 0: 
+        return 0
+    elif n == 0 or n == 1: 
+        return 1
+    else: 
+        fact = 1
+        while(n > 1): 
+            fact *= n 
+            n -= 1
+        return fact 
+  
