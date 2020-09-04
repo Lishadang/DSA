@@ -1,0 +1,34 @@
+Basic Euclidean Algorithm for HCF
+The Euclidean algorithm is based on the below facts:
+If we subtract the smaller number from larger (we reduce larger number), GCD doesn't change. So if we keep subtracting
+repeatedly the larger of two, we end up with GCD.
+Now instead of subtraction, if we divide the smaller number, the algorithm stops when the remainder is found to be 0.
+
+Below is the recursive function for finding GCD using Euclidean Algorithm:
+gcd(a, b)
+{
+    if (a == 0)
+        return b;
+
+    return gcd(b % a, a);
+}
+
+Time Complexity: O(log(min(a, b)))
+
+def gcd(a,b): 
+    if a == 0: 
+        return b 
+    return gcd(b % a, a) 
+  
+# Function to return LCM of two numbers 
+def lcm(a,b): 
+    return (a*b) / gcd(a,b) 
+  
+print('LCM of', a, 'and', b, 'is', lcm(a, b)) 
+  
+Important properties of LCM and HCF:
+For two numbers say, 'a' and 'b', LCM x HCF = a x b.
+HCF of co-primes = 1.
+For two fractions,
+HCF = HCF (Numerators) / LCM (Denominators)
+LCM = LCM (Numerators) / HCF (Denominators)
