@@ -17,3 +17,43 @@ complexity of the solution is O(digitsCount).
 Solution 2
 number of digits in N = log10(N) + 1.
 complexity of the solution is O(1).
+
+Python code
+import math 
+  
+def countDigit(n): 
+    return math.floor(math.log(n, 10)+1) 
+  
+# Driver Code 
+n = 345289467
+print ("Number of digits : % d"%(countDigit(n))) 
+
+def countDigit(n): 
+    count = 0
+    while n != 0: 
+        n //= 10
+        count+= 1
+    return count 
+# Driver Code     
+n = 345289467
+print ("Number of digits : % d"%(countDigit(n))) 
+
+
+  
+def count_digits(n): 
+    n = str(n) 
+    return len(n) 
+  
+# Driver code 
+n = 456533457776
+print(count_digits(n))
+
+def countDigit(n): 
+    if n == 0: 
+        return 0
+    return 1 + countDigit(n // 10) 
+  
+# Driver Code     
+n = 345289467
+print ("Number of digits : % d"%(countDigit(n))) 
+
