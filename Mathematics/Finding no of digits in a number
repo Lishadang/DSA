@@ -1,0 +1,19 @@
+Given an integral number N. The task is to find the count of digits present in this number.
+N = 2019
+
+Number of digits in N here is 4 and,
+the digits are: 2, 0, 1, 9.
+  Check if the number N is not equals to zero.
+  Increase the count of digits by 1 if N is not zero.
+  Reduce the number by dividing it by 10.
+  Repeat the above steps until the number is reduced to zero.
+N not equals to 0
+Increment digitsCount, digitsCount = digitsCount + 1.
+digitsCount = 0 + 1 = 1.
+N = N/10 = 58964/10 = 5896.
+
+complexity of the solution is O(digitsCount).
+
+Solution 2
+number of digits in N = log10(N) + 1.
+complexity of the solution is O(1).
