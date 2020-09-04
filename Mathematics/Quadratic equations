@@ -1,0 +1,28 @@
+a*x2 + b*x + c = 0
+
+If b2 < 4ac, then roots are complex
+(not real).
+For example roots of x2 + x + 1, roots are
+-0.5 + i1.73205 and -0.5 - i1.73205
+
+If b2 = 4ac, then roots are real 
+and both roots are same.
+For example, roots of x2 - 2x + 1 are 1 and 1
+
+If b2 > 4ac, then roots are real 
+and different.
+For example, roots of x2 - 7x - 12 are 3 and 4
+
+print("Equation: ax^2 + bx + c ")
+a=int(input("Enter a: "))
+b=int(input("Enter b: "))
+c=int(input("Enter c: "))
+d=b**2-4*a*c
+d1=d**0.5
+if(d<0):
+    print("The roots are imaginary. ")
+else:
+    r1=(-b+d1)/2*a
+    r2=(-b-d1)/2*a
+    print("The first root: ",round(r1,2))
+    print("The second root: ",round(r2,2))
