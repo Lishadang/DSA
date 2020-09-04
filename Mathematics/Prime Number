@@ -1,0 +1,41 @@
+check if there aren't any factors of N except and 1 and N itself.
+
+Algorithm:
+If, N is less than 2. It is not prime, return False.
+Else:
+Iterate from 2 to N-1 and check if any of the numbers between 2 and N-1 (both inclusive) divides N or not.
+If yes, then N is not prime, return False.
+Otherwise, return True.
+
+Analysis of the above algorithm: Since we are traversing linearly from 2 to N-1, the time complexity of the above
+algorithm will be linear O(N).
+
+num = int(input("Enter a number: "))  
+  
+if num > 1:  
+   for i in range(2,num):  
+       if (num % i) == 0:  
+           print(num,"is not a prime number")  
+           print(i,"times",num//i,"is",num)  
+           break  
+   else:  
+       print(num,"is a prime number")  
+         
+else:  
+   print(num,"is not a prime number")  
+
+# Python program to display all the prime numbers within an interval
+
+lower = 900
+upper = 1000
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
