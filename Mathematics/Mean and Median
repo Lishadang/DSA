@@ -1,0 +1,49 @@
+Facts about Mean :
+The mean (or average) is the most popular and well known measure of central tendency.
+It can be used with both discrete and continuous data, although its use is most often with continuous data.
+There are other types of means. Geometric mean, Harmonic mean and Arithmetic mean.
+Mean is the only measure of central tendency where the sum of the deviations of each value from the mean is always zero.
+
+Formula for finding Median :
+If the count of numbers is odd: After sorting the sequence,
+Median = {(N+1)/2}th value.
+If the count of numbers is even: After sorting the sequence,
+Median  =  Average of (N/2)th and {(N/2) + 1}th value.
+
+Facts about Median :
+Median is an important measure (compared to mean) for distorted data, because median is not so easily distorted. For example, median of {1, 2, 2, 5, 100) is 2 and mean is 22.
+If the user adds a constant to every value, the mean and median increases by the same constant.
+If the user multiplies every value by a constant, the mean and the median will also be multiplied by that constant.
+
+import numpy
+
+speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+x = numpy.mean(speed)
+
+print(x)
+
+import numpy
+
+speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+x = numpy.median(speed)
+
+print(x)
+
+>>> import statistics
+
+>>> statistics.median([3, 5, 1, 4, 2])
+3
+
+
+from scipy import stats
+
+speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+x = stats.mode(speed)
+
+print(x)
+
+>>> statistics.multimode(["few", "few", "many", "some", "many"])
+['few', 'many']
